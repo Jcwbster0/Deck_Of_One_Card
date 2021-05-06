@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R01-Cn-ogS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="sGY-0Z-TKh">
+            <objects>
+                <viewController id="R01-Cn-ogS" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZa-P0-4L8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVi-BY-FCx">
+                                <rect key="frame" x="31" y="121" width="352" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4oi-Ck-SYW">
+                                <rect key="frame" x="78" y="239" width="258" height="428"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGo-95-ekl">
+                                <rect key="frame" x="143.5" y="733" width="127" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Draw a Card"/>
+                                <connections>
+                                    <action selector="drawCardButtonTapped:" destination="R01-Cn-ogS" eventType="touchUpInside" id="4YR-zn-Xgy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dAx-36-yHn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4oi-Ck-SYW" firstAttribute="centerY" secondItem="dAx-36-yHn" secondAttribute="centerY" id="3rZ-gj-RGY"/>
+                            <constraint firstItem="4oi-Ck-SYW" firstAttribute="top" secondItem="iVi-BY-FCx" secondAttribute="bottom" constant="118" id="Ga3-ED-gTD"/>
+                            <constraint firstItem="4oi-Ck-SYW" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="fJ3-i6-nRD"/>
+                            <constraint firstItem="4oi-Ck-SYW" firstAttribute="centerX" secondItem="sGo-95-ekl" secondAttribute="centerX" id="foe-Fs-mAl"/>
+                            <constraint firstItem="4oi-Ck-SYW" firstAttribute="leading" secondItem="dAx-36-yHn" secondAttribute="leading" constant="78" id="ib5-rr-RIX"/>
+                            <constraint firstItem="sGo-95-ekl" firstAttribute="top" secondItem="4oi-Ck-SYW" secondAttribute="bottom" constant="66" id="mwP-Mw-e8O"/>
+                            <constraint firstItem="iVi-BY-FCx" firstAttribute="width" secondItem="IZa-P0-4L8" secondAttribute="width" multiplier="0.85" id="o34-8G-SU7"/>
+                            <constraint firstItem="iVi-BY-FCx" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="sPP-wp-j6U"/>
+                            <constraint firstItem="iVi-BY-FCx" firstAttribute="top" secondItem="dAx-36-yHn" secondAttribute="top" constant="77" id="wmH-FP-K7Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="4oi-Ck-SYW" id="gNs-zG-Wgn"/>
+                        <outlet property="valueAndSuitLabel" destination="iVi-BY-FCx" id="fti-5m-Zah"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKM-Hs-mUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366" y="-254"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
